@@ -2,15 +2,19 @@
 
 ###############################################################
 #
-# Script for bootstrapping a softlayer vm with docker
+# Script for bootstrapping a softlayer vm Ubuntu minimal install 
+# with docker
+#
+# - installs the latest version of docker
+# - installs the latest version of docker-compose
 #
 # Softlayer nodes have a root user enabled by default
 #
 ###############################################################
 
-echo `date` bootstrapping node
+echo `date` bootstrapping node...
 
-echo `date` installing docker
+echo `date` installing docker...
 
 apt-get update && apt-get -y install linux-image-extra-$(uname -r) curl apt-transport-https
 curl -L https://get.docker.com/ | sh
